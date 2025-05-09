@@ -8,19 +8,19 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-color: #f8e1f4; /* Soft pinkish background */
-      color: #52057b; /* Darker purple text */
+      background-color: #f8e1f4; /* Soft pink background */
+      color: #4a148c; /* Dark purple text */
       text-align: center;
-      background-image: url('your-photo.jpg'); /* Replace with your photo URL */
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-      height: 100vh;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       overflow: hidden;
+      background-image: url('your-photo.jpg'); /* Replace with your photo URL */
+      background-size: cover;
+      background-position: center;
+      position: relative;
     }
 
     h1 {
@@ -31,44 +31,56 @@
       letter-spacing: 3px;
       text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
       animation: fadeIn 2s ease-out;
+      margin: 0;
     }
 
-    .slideshow-container {
-      position: relative;
-      max-width: 90%;
-      margin: 30px auto;
-      height: 60vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .mySlides {
-      display: none;
-      font-size: 40px;
+    h2 {
+      font-size: 48px;
+      color: #8e24aa;
       font-weight: 700;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 15px;
-      max-width: 80%;
-      margin: 10px auto;
-      animation: slideIn 1.5s ease-out;
-      transition: opacity 2s ease-in-out;
+      margin: 20px;
+      animation: fadeIn 2s ease-out 0.5s;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .signature {
-      margin-top: 50px;
-      font-size: 30px;
-      color: #8e24aa;
+      font-size: 36px;
+      color: #4a148c;
       font-weight: 700;
-      letter-spacing: 1px;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 2s ease-in-out;
+      margin: 40px 0;
+      font-style: italic;
+      animation: fadeIn 2s ease-out 1s;
+    }
+
+    .button {
+      font-size: 24px;
+      padding: 15px 30px;
+      margin-top: 30px;
+      background-color: #9c27b0;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      animation: fadeIn 2s ease-out 1.5s;
+    }
+
+    .button:hover {
+      background-color: #8e24aa;
+      transform: scale(1.1);
+    }
+
+    .surprise {
+      display: none;
+      font-size: 30px;
+      color: #ff4081;
+      font-weight: 700;
+      margin-top: 50px;
+      animation: fadeIn 2s ease-out 2s;
     }
 
     .music-player {
-      margin-top: 30px;
+      margin-top: 50px;
     }
 
     audio {
@@ -83,47 +95,65 @@
       100% { opacity: 1; }
     }
 
-    @keyframes slideIn {
-      0% { opacity: 0; transform: translateY(50px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
     @media screen and (max-width: 768px) {
       h1 {
         font-size: 60px;
       }
 
-      .mySlides {
-        font-size: 30px;
+      h2 {
+        font-size: 36px;
       }
 
       .signature {
-        font-size: 24px;
+        font-size: 28px;
       }
 
-      audio {
-        width: 90%;
+      .button {
+        font-size: 18px;
+        padding: 12px 25px;
       }
     }
   </style>
 </head>
 <body>
 
-  <h1>NEO for Fariha</h1>
-  
-  <div class="slideshow-container">
-    <div class="mySlides fade">My love for you grows stronger every single day, Fariha. ❤️</div>
-    <div class="mySlides fade">In your eyes, I see my whole world. You are my everything. 🌎</div>
-    <div class="mySlides fade">You and I, together forever... There's no other place I'd rather be. 💕</div>
-    <div class="mySlides fade">With every heartbeat, my love for you gets deeper and deeper. 💖</div>
-    <div class="mySlides fade">You make my world brighter, Fariha. I can't imagine my life without you. ✨</div>
-    <div class="mySlides fade">For every moment we've shared and every one yet to come, I am yours. Forever. 🌹</div>
-  </div>
-
+  <h1>For Fariha</h1>
+  <h2>I love you more than words can say.</h2>
   <div class="signature">
     Yours forever, Subom
   </div>
 
+  <!-- Surprise #1 Button -->
+  <button class="button" onclick="revealSurprise('surprise1')">Click for Your First Surprise!</button>
+  <div class="surprise" id="surprise1">
+    You make my world brighter every day. 💖
+  </div>
+
+  <!-- Surprise #2 Button -->
+  <button class="button" onclick="revealSurprise('surprise2')">Click for Your Second Surprise!</button>
+  <div class="surprise" id="surprise2">
+    My love for you is infinite, Fariha. You complete me. 🌹
+  </div>
+
+  <!-- Surprise #3 Button -->
+  <button class="button" onclick="revealSurprise('surprise3')">Click for Your Third Surprise!</button>
+  <div class="surprise" id="surprise3">
+    Every second with you is a dream come true. 💕
+  </div>
+
+  <!-- Surprise #4 Button -->
+  <button class="button" onclick="revealSurprise('surprise4')">Click for Your Fourth Surprise!</button>
+  <div class="surprise" id="surprise4">
+    You're the reason I smile every day. 😊
+  </div>
+
+  <!-- Surprise #5 Button -->
+  <button class="button" onclick="revealSurprise('surprise5')">Click for Your Fifth Surprise!</button>
+  <div class="surprise" id="surprise5">
+    You are the best thing that ever happened to me. Forever yours. 💞
+  </div>
+
+  <!-- Music player -->
   <div class="music-player">
     <audio controls autoplay loop>
       <source src="tum-jab-paas-prateek-kuhad.mp3" type="audio/mp3"> <!-- Replace with actual file path -->
@@ -132,19 +162,14 @@
   </div>
 
   <script>
-    let slideIndex = 0;
-    function showSlides() {
-      let slides = document.getElementsByClassName("mySlides");
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}
-      slides[slideIndex - 1].style.display = "block";  
-      setTimeout(showSlides, 8000); // Change slide every 8 seconds
+    // Function to reveal hidden surprise based on the clicked button
+    function revealSurprise(surpriseId) {
+      document.getElementById(surpriseId).style.display = 'block';
+      let button = event.target;
+      button.style.display = 'none'; // Hide the button after clicking
     }
-    showSlides();
   </script>
 
 </body>
 </html>
+ 
