@@ -1,192 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>For Fariha | A Love Story by Subom</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Fariha - By Subom</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: #fff0f5;
+      background: linear-gradient(to bottom, #ffe4f4, #f3e5f5);
       color: #4a148c;
+      scroll-behavior: smooth;
+      animation: page-load 1s ease-out;
+    }
+    @keyframes page-load {
+      0% { opacity: 0; transform: scale(0.5); }
+      100% { opacity: 1; transform: scale(1); }
     }
     section {
       padding: 100px 30px;
       min-height: 100vh;
+      text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
-    }
-    .intro {
-      background: linear-gradient(120deg, #ffd6f5, #e0c3fc);
-      font-family: 'Playfair Display', serif;
-    }
-    .intro h1 {
-      font-size: 70px;
-      margin-bottom: 10px;
-    }
-    .intro p {
-      font-size: 24px;
-      max-width: 600px;
-    }
-    .surprise {
-      background: #fff0f6;
+      transition: all 0.6s ease;
       position: relative;
     }
-    .heart-pop {
-      font-size: 60px;
-      color: #e91e63;
-      animation: popIn 1.2s ease forwards;
-      opacity: 0;
+    section:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 50px rgba(255, 105, 180, 0.2);
     }
-    @keyframes popIn {
-      0% { transform: scale(0); opacity: 0; }
-      50% { transform: scale(1.3); opacity: 1; }
-      100% { transform: scale(1); }
-    }
-    .message-section {
-      background: linear-gradient(to right, #f8e1f4, #ffe4f4);
-      font-family: 'Great Vibes', cursive;
-      font-size: 32px;
-      color: #8e24aa;
-    }
-    .signature {
-      margin-top: 40px;
+    h1, h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 26px;
-    }
-    .music-player {
-      background: #fce4ec;
-    }
-    audio {
-      margin-top: 30px;
-      width: 80%;
-      max-width: 400px;
-      border-radius: 10px;
-    }
-    .gallery {
-      background: #f9f0ff;
-    }
-    .gallery h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-    }
-    .slideshow {
-      display: flex;
-      overflow-x: scroll;
-      gap: 20px;
-      padding: 20px;
-    }
-    .slideshow img {
-      height: 300px;
-      border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    }
-    .final-promise {
-      background: #ffe4e1;
-      font-family: 'Playfair Display', serif;
-    }
-    .final-promise h2 {
-      font-size: 38px;
+      font-size: 3em;
       animation: glow 2s ease-in-out infinite alternate;
     }
     @keyframes glow {
-      from { text-shadow: 0 0 5px #ff9a9e; }
-      to { text-shadow: 0 0 20px #ff4081; }
+      from { text-shadow: 0 0 10px #ff99cc; }
+      to { text-shadow: 0 0 20px #ff66cc, 0 0 30px #ff66cc; }
     }
-    .floating-heart {
-      position: absolute;
-      animation: floatUp 5s infinite ease-in;
-      color: #f06292;
-      font-size: 24px;
-      opacity: 0.8;
+    p {
+      font-size: 1.3em;
+      max-width: 700px;
+      line-height: 1.6em;
+      animation: fadeIn 2s ease forwards;
     }
-    @keyframes floatUp {
-      0% { transform: translateY(0) scale(1); opacity: 0.8; }
-      100% { transform: translateY(-800px) scale(1.5); opacity: 0; }
+    .romantic {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2em;
+      color: #d81b60;
     }
-    .button-surprise {
-      padding: 15px 30px;
-      font-size: 20px;
+    .slideshow img {
+      height: 300px;
+      border-radius: 15px;
+      margin: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .music {
+      background: #fce4ec;
+      padding: 40px;
+    }
+    .music audio {
+      width: 80%;
+      max-width: 500px;
+    }
+    .signature {
+      margin-top: 30px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8em;
+    }
+    .surprise-btn {
+      padding: 15px 25px;
       background: #ff69b4;
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
       color: white;
+      font-size: 1.2em;
+      margin-top: 20px;
       cursor: pointer;
-      transition: transform 0.3s ease;
-      margin-top: 30px;
+      animation: pulse 2s infinite;
     }
-    .button-surprise:hover {
-      transform: scale(1.1) rotate(2deg);
-      background: #d81b60;
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .hidden-content {
+      display: none;
+      margin-top: 20px;
+      animation: fadeIn 2s forwards;
+    }
+    .page-btn {
+      padding: 15px 25px;
+      background: #ff69b4;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 1.5em;
+      margin-top: 40px;
+      cursor: pointer;
+      animation: bounce 2s ease-in-out infinite;
+    }
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <div class="floating-heart" style="left: 20%; animation-delay: 0s;">❤️</div>
-  <div class="floating-heart" style="left: 50%; animation-delay: 2s;">❤️</div>
-  <div class="floating-heart" style="left: 80%; animation-delay: 1s;">❤️</div>
-
-  <section class="intro">
+  <section style="background:#ffe4f4;">
     <h1>For Fariha</h1>
-    <p>Every scroll you take is a step deeper into my heart. This isn’t just a website. It’s a love letter stretched across space, code, and time — just for you.</p>
-  </section>
-
-  <section class="surprise">
-    <div class="heart-pop">❤️</div>
-    <p style="font-size: 24px; margin-top: 40px;">Did your heart just skip a beat? Mine does every time I think of you.</p>
-  </section>
-
-  <section class="message-section">
-    <p>My love, my Fariha,</p>
-    <p>When I see you smile, the world disappears and all that exists is light, warmth, and your soul touching mine.</p>
-    <p>You are my poem, my sky full of stars, the voice I wait for in silence.</p>
-    <p>I fall for you again and again — endlessly.</p>
-    <div class="signature">– Yours forever, Subom (NEO)</div>
-  </section>
-
-  <section class="music-player">
-    <h2>Play our song, my love</h2>
-    <audio controls autoplay loop>
-      <source src="tum-jab-paas-prateek-kuhad.mp3" type="audio/mp3">
-      Your browser does not support the audio element.
-    </audio>
-  </section>
-
-  <section class="gallery">
-    <h2>Our Memories</h2>
-    <div class="slideshow">
-      <img src="https://via.placeholder.com/400x300?text=Moment+1" alt="Memory 1">
-      <img src="https://via.placeholder.com/400x300?text=Moment+2" alt="Memory 2">
-      <img src="https://via.placeholder.com/400x300?text=Moment+3" alt="Memory 3">
+    <p>Every word, every scroll, every element here is a heartbeat from me to you. This is more than code — it's love stitched into pixels.</p>
+    <button class="surprise-btn" onclick="document.getElementById('first-surprise').style.display='block'">Reveal Surprise</button>
+    <div id="first-surprise" class="hidden-content">
+      <p class="romantic">You’re the poetry the stars whisper when they fall.</p>
     </div>
   </section>
 
-  <section class="surprise">
-    <h2>Click this if you dare to smile more!</h2>
-    <button class="button-surprise" onclick="alert('I love you more than these words can show.')">Click Me</button>
+  <section class="slideshow" style="background:#f3e5f5;">
+    <h2>Our Memories</h2>
+    <div>
+      <img src="https://placekitten.com/300/300" alt="Memory 1">
+      <img src="https://placekitten.com/301/300" alt="Memory 2">
+      <img src="https://placekitten.com/302/300" alt="Memory 3">
+    </div>
+    <button class="page-btn" onclick="window.location.href='#page-2'">Next Page</button>
   </section>
 
-  <section class="final-promise">
-    <h2>One Last Thing...</h2>
-    <p style="font-size: 24px; max-width: 600px; margin-top: 20px;">
-      I promise to choose you, every single day.  
-      In every universe, timeline, and lifetime—  
-      I will find you and fall in love with you all over again.
-    </p>
-    <div class="signature">Forever yours, Subom (NEO)</div>
+  <section id="page-2" style="background:#f3e5f5;">
+    <h2>Our Song</h2>
+    <p class="romantic">“Tum Jab Paas” by Prateek Kuhad</p>
+    <audio controls autoplay loop>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+    <button class="page-btn" onclick="window.location.href='#page-3'">Next Page</button>
   </section>
 
-  <!-- Section 8+ will continue below -->
-  <!-- I will keep adding full blocks with rich, diverse, romantic content until we reach hundreds more -->
+  <section id="page-3" style="background:#e1bee7;">
+    <h2>When We First Met</h2>
+    <p>There are moments that change the world, and the moment I met you changed mine. I’ve never felt more alive.</p>
+    <button class="page-btn" onclick="window.location.href='#page-4'">Next Page</button>
+  </section>
 
+  <section id="page-4" style="background:#f9fbe7;">
+    <h2>The Way You Smile</h2>
+    <p>Every time you smile, the world stops for a second, and all I can hear is the beautiful rhythm of my heart.</p>
+    <button class="page-btn" onclick="window.location.href='#page-5'">Next Page</button>
+  </section>
+
+  <section id="page-5" style="background:#fce4ec;">
+    <h2>Forever Us</h2>
+    <p>Every chapter of this journey, written with you, leads to forever. We are infinite together, like stars scattered across time.</p>
+    <button class="page-btn" onclick="window.location.href='#page-6'">Next Page</button>
+  </section>
+
+  <section id="page-6" style="background:#ffeb3b;">
+    <h2>The Hidden Surprise</h2>
+    <p>Let me take you to a hidden world — where we share secrets, dreams, and every quiet moment that only you and I will ever understand.</p>
+    <button class="surprise-btn" onclick="document.getElementById('second-surprise').style.display='block'">Reveal Secret</button>
+    <div id="second-surprise" class="hidden-content">
+      <p class="romantic">I promise to make our love as timeless as the stars above.</p>
+    </div>
+    <button class="page-btn" onclick="window.location.href='#page-7'">Next Page</button>
+  </section>
+
+  <section id="page-7" style="background:#ffecb3;">
+    <h2>Every New Day</h2>
+    <p>Every day with you feels like a new beginning. I am constantly falling deeper into this beautiful love.</p>
+    <button class="page-btn" onclick="window.location.href='#page-8'">Next Page</button>
+  </section>
+
+  <section id="page-8" style="background:#ffe0b2;">
+    <h2>Our Endless Adventure</h2>
+    <p>The world is vast, but with you by my side, every journey is an adventure worth taking. Together, we'll explore forever.</p>
+    <button class="page-btn" onclick="window.location.href='#page-9'">Next Page</button>
+  </section>
+
+  <section id="page-9" style="background:#f3e5f5;">
+    <h2>Endless Love</h2>
+    <p>This love will continue beyond this website, beyond every word. It’s an eternal story that we write together every day.</p>
+    <div class="signature">Yours forever, Subom</div>
+    <button class="page-btn" onclick="window.location.href='#page-10'">Next Page</button>
+  </section>
+
+  <script>
+    document.querySelectorAll('.surprise-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const audio = new Audio('https://www.myinstants.com/media/sounds/twinkle.mp3');
+        audio.play();
+      });
+    });
+  </script>
 </body>
 </html>
+
