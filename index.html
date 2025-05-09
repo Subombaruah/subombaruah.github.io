@@ -14,6 +14,29 @@
       line-height: 1.6;
     }
 
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      background-color: #fff0f5;
+      color: #d63384;
+      font-size: 1.2em;
+      padding: 10px 0;
+      font-style: italic;
+      animation: scroll-left 15s linear infinite;
+      text-align: center;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
     header {
       text-align: center;
       padding: 60px 20px;
@@ -73,34 +96,30 @@
       font-size: 0.9em;
       color: #999;
     }
-    <div class="marquee">
-  .marquee {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-  background-color: #fff0f5;
-  color: #d63384;
-  font-size: 1.2em;
-  padding: 10px 0;
-  font-style: italic;
-  animation: scroll-left 15s linear infinite;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
   </style>
 </head>
 <body>
+  <!-- Scrolling text -->
   <div class="marquee">
-  I love you more with every sunrise, every smile, every heartbeat...
-</div>
+    I love you more with every sunrise, every smile, every heartbeat...
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    window.addEventListener('load', () => {
+      const music = document.getElementById('bgMusic');
+      music.volume = 0.5;
+      music.play().catch(() => {
+        console.log("Autoplay blocked. Tap screen to play music.");
+      });
+    });
+  </script>
+
   <header>
     <h1>To My Dearest Fariha</h1>
   </header>
@@ -141,5 +160,3 @@
   </footer>
 </body>
 </html>
-    
-  
