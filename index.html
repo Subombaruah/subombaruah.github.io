@@ -73,9 +73,34 @@
       font-size: 0.9em;
       color: #999;
     }
+    <div class="marquee">
+  .marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  background-color: #fff0f5;
+  color: #d63384;
+  font-size: 1.2em;
+  padding: 10px 0;
+  font-style: italic;
+  animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
   </style>
 </head>
 <body>
+  <div class="marquee">
+  I love you more with every sunrise, every smile, every heartbeat...
+</div>
   <header>
     <h1>To My Dearest Fariha</h1>
   </header>
