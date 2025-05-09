@@ -2,161 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>To Fariha, With All My Love</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Fariha | NEO</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(120deg, #ffe6f0, #fff0f5);
-      color: #4d2c3d;
-      line-height: 1.6;
-    }
-
-    .marquee {
-      width: 100%;
+      font-family: 'Arial', sans-serif;
+      background-color: #f8e1f4; /* Soft pinkish background */
+      color: #52057b; /* Darker purple text */
+      text-align: center;
+      background-image: url('your-photo.jpg'); /* Replace with your photo URL */
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       overflow: hidden;
-      white-space: nowrap;
-      box-sizing: border-box;
-      background-color: #fff0f5;
-      color: #d63384;
-      font-size: 1.2em;
-      padding: 10px 0;
-      font-style: italic;
-      animation: scroll-left 15s linear infinite;
-      text-align: center;
     }
 
-    @keyframes scroll-left {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
+    h1 {
+      font-size: 80px;
+      color: #9c27b0;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 2s ease-out;
     }
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background-color: #ffccdd;
-      border-bottom: 5px solid #d63384;
+    .slideshow-container {
+      position: relative;
+      max-width: 90%;
+      margin: 30px auto;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
-    header h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.5em;
-      color: #d63384;
-      margin: 0;
-    }
-
-    .content {
-      max-width: 800px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-
-    .heart {
-      font-size: 2em;
-      color: #ff4d88;
-    }
-
-    .surprise {
+    .mySlides {
       display: none;
-      margin-top: 20px;
+      font-size: 40px;
+      font-weight: 700;
       padding: 20px;
-      border: 2px dashed #d63384;
-      border-radius: 10px;
-      background-color: #fff5f9;
-      font-style: italic;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      max-width: 80%;
+      margin: 10px auto;
+      animation: slideIn 1.5s ease-out;
+      transition: opacity 2s ease-in-out;
     }
 
-    button {
-      background-color: #d63384;
-      color: white;
-      padding: 10px 20px;
-      font-size: 1em;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
+    .signature {
+      margin-top: 50px;
+      font-size: 30px;
+      color: #8e24aa;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .music-player {
       margin-top: 30px;
     }
 
-    button:hover {
-      background-color: #bf296f;
+    audio {
+      width: 80%;
+      border-radius: 8px;
+      background-color: #9c27b0;
+      color: white;
     }
 
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9em;
-      color: #999;
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 60px;
+      }
+
+      .mySlides {
+        font-size: 30px;
+      }
+
+      .signature {
+        font-size: 24px;
+      }
+
+      audio {
+        width: 90%;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Scrolling text -->
-  <div class="marquee">
-    I love you more with every sunrise, every smile, every heartbeat...
+
+  <h1>NEO for Fariha</h1>
+  
+  <div class="slideshow-container">
+    <div class="mySlides fade">My love for you grows stronger every single day, Fariha. ❤️</div>
+    <div class="mySlides fade">In your eyes, I see my whole world. You are my everything. 🌎</div>
+    <div class="mySlides fade">You and I, together forever... There's no other place I'd rather be. 💕</div>
+    <div class="mySlides fade">With every heartbeat, my love for you gets deeper and deeper. 💖</div>
+    <div class="mySlides fade">You make my world brighter, Fariha. I can't imagine my life without you. ✨</div>
+    <div class="mySlides fade">For every moment we've shared and every one yet to come, I am yours. Forever. 🌹</div>
   </div>
 
-  <!-- Background Music -->
-  <audio id="bgMusic" autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
+  <div class="signature">
+    Yours forever, Subom
+  </div>
+
+  <div class="music-player">
+    <audio controls autoplay loop>
+      <source src="tum-jab-paas-prateek-kuhad.mp3" type="audio/mp3"> <!-- Replace with actual file path -->
+      Your browser does not support the audio element.
+    </audio>
+  </div>
 
   <script>
-    window.addEventListener('load', () => {
-      const music = document.getElementById('bgMusic');
-      music.volume = 0.5;
-      music.play().catch(() => {
-        console.log("Autoplay blocked. Tap screen to play music.");
-      });
-    });
+    let slideIndex = 0;
+    function showSlides() {
+      let slides = document.getElementsByClassName("mySlides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex - 1].style.display = "block";  
+      setTimeout(showSlides, 8000); // Change slide every 8 seconds
+    }
+    showSlides();
   </script>
 
-  <header>
-    <h1>To My Dearest Fariha</h1>
-  </header>
-
-  <div class="content">
-    <p class="heart">♥ ♥ ♥</p>
-    <p>
-      Fariha, you are the heartbeat behind every smile I wear, the magic in every ordinary moment, and the reason my world feels complete. I made this website just for you — a place that holds a piece of my heart, captured in code and color. Words will never be enough to describe how much I love you, but I'll try anyway...
-    </p>
-
-    <p>
-      Your laugh is my favorite melody, your eyes — two stars that light up the darkest nights. Every moment with you feels like a chapter in the most beautiful fairytale. I love the way you care, the way you dream, the way you simply exist. You are kindness, strength, beauty, and brilliance — all in one soul.
-    </p>
-
-    <p>
-      I could count stars for a lifetime and still not reach the number of ways I adore you. I love you more than the distance between galaxies, more than the notes in a song, more than words can whisper. You are my always and forever.
-    </p>
-
-    <button onclick="document.getElementById('surprise').style.display='block'">Click here for a surprise!</button>
-
-    <div id="surprise" class="surprise">
-      You found the secret message!  
-      <br><br>
-      Someday, I’ll read this page to you under the stars, holding your hand, while you laugh at how cheesy I am.  
-      <br><br>
-      Until then… just know that someone out here is head-over-heels in love with you.  
-      <br><br>
-      Forever yours,  
-      <br>
-      <strong>[Your Name]</strong>
-    </div>
-
-    <p class="heart">♥ ♥ ♥</p>
-  </div>
-
-  <footer>
-    This website was made with love, just for Fariha.
-  </footer>
 </body>
 </html>
